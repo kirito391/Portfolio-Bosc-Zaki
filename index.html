@@ -1,179 +1,511 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <title>Portfolio - Zaki Bosc</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<title>Portfolio - Zaki Bosc</title>
 
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    body,h1,h2,h3,h4,h5{
-      font-family:"Raleway",sans-serif;
-    }
+<link rel="stylesheet"
+href="https://www.w3schools.com/w3css/4/w3.css">
 
-    body{
-      background:#d9d9d9;
-    }
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css?family=Raleway">
 
-    /* Sidebar */
-    .w3-sidebar a:hover{
-      background:#e6e6e6 !important;
-      color:black !important;
-    }
+<style>
 
-    /* zone principale */
-    .content-card{
-      background:#f5f5f5;
-      padding:20px;
-      border-radius:10px;
-    }
+body,h1,h2,h3,h4,h5{
+font-family:"Raleway",sans-serif
+}
 
-    /* section profil */
-    .profile-img{
-      border-radius:50%;
-      width:200px;
-      height:200px;
-      object-fit:cover;
-      border:4px solid white;
-      box-shadow:0 5px 15px rgba(0,0,0,0.2);
-    }
+body{
+background:#e0e0e0;
+}
 
-    /* compétences */
-    .skill{
-      margin-bottom:20px;
-    }
+/* Sidebar */
 
-    .skill img{
-      width:45px;
-      height:45px;
-      object-fit:cover;
-      margin-top:8px;
-    }
+.w3-sidebar a{
+transition:.3s;
+}
 
-    /* barre de progression */
-    .w3-white{
-      border-radius:10px;
-      overflow:hidden;
-    }
+.w3-sidebar a:hover{
 
-    .w3-grey{
-      border-radius:10px;
-    }
+background:#d9d9d9 !important;
 
-    /* audio */
-    audio{
-      width:100%;
-      margin-top:10px;
-    }
+padding-left:15px;
 
-  </style>
+}
+
+/* Responsive sidebar */
+
+@media screen and (max-width:992px){
+
+#mainContent{
+margin-left:0 !important;
+}
+
+}
+
+/* Contenu */
+
+.w3-main{
+min-height:100vh;
+}
+
+/* Cartes */
+
+.box{
+
+background:white;
+
+padding:25px;
+
+margin-bottom:30px;
+
+border-radius:15px;
+
+border:3px solid #bdbdbd;
+
+transition:.35s;
+
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+
+}
+
+.box:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+/* Image profil */
+
+.profile{
+
+width:220px;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:5px solid #d0d0d0;
+
+transition:.3s;
+
+}
+
+.profile:hover{
+
+transform:scale(1.05);
+
+}
+
+/* Compétences */
+
+.skill{
+
+padding:15px;
+
+border:2px solid #e5e5e5;
+
+border-radius:10px;
+
+margin-bottom:20px;
+
+transition:.3s;
+
+}
+
+.skill:hover{
+
+transform:translateX(8px);
+
+background:#f7f7f7;
+
+}
+
+.skill img{
+
+width:50px;
+
+height:50px;
+
+margin-top:10px;
+
+margin-bottom:10px;
+
+border-radius:8px;
+
+transition:.3s;
+
+}
+
+.skill img:hover{
+
+transform:scale(1.15);
+
+}
+
+/* Contact */
+
+.contact a{
+
+text-decoration:none;
+
+color:black;
+
+transition:.3s;
+
+}
+
+.contact a:hover{
+
+color:#2196F3;
+
+}
+
+/* Audio */
+
+audio{
+
+width:100%;
+
+margin-top:10px;
+
+}
+
+/* Progression */
+
+.progress{
+
+border-radius:10px;
+
+overflow:hidden;
+
+}
+
+.progress div{
+
+border-radius:10px;
+
+}
+
+</style>
+
 </head>
 
 <body class="w3-content" style="max-width:1600px">
 
-<!-- SIDEBAR -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
-style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+<!-- Sidebar -->
 
-  <h3 class="w3-padding-64 w3-center"><b>Zaki<br>Bosc</b></h3>
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top w3-center w3-card"
 
-  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">À Propos de Moi</a>
-  <a href="Projets.html" onclick="w3_close()" class="w3-bar-item w3-button">Projets Scolaire</a>
-  <a href="Stage.html" class="w3-bar-item w3-button">Stage</a>
-  <a href="CSSNO.html" class="w3-bar-item w3-button">CS SNO</a>
+style="z-index:3;width:300px;font-weight:bold"
+
+id="mySidebar">
+
+<br>
+
+<h3 class="w3-padding-64">
+
+<b>Zaki<br>Bosc</b>
+
+</h3>
+
+<a href="#" onclick="w3_close()" class="w3-bar-item w3-button">
+
+À propos de moi
+
+</a>
+
+<a href="Projets.html" onclick="w3_close()" class="w3-bar-item w3-button">
+
+Projets scolaires
+
+</a>
+
+<a href="Stage.html" onclick="w3_close()" class="w3-bar-item w3-button">
+
+Stage
+
+</a>
+
+<a href="CSSNO.html" onclick="w3_close()" class="w3-bar-item w3-button">
+
+CS SNO
+
+</a>
 
 </nav>
 
-<!-- MENU MOBILE -->
-<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
-  <span class="w3-left w3-padding">Zaki Bosc</span>
-  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+<!-- Menu mobile -->
+
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding">
+
+<span>Zaki Bosc</span>
+
+<a href="javascript:void(0)"
+
+class="w3-right w3-button"
+
+onclick="w3_open()">
+
+☰
+
+</a>
+
 </header>
 
-<div class="w3-overlay w3-hide-large w3-animate-opacity"
-onclick="w3_close()" id="myOverlay"></div>
+<!-- Overlay -->
 
-<!-- PAGE -->
-<div class="w3-main" style="margin-left:300px">
+<div class="w3-overlay w3-hide-large"
 
-  <div class="w3-hide-large" style="margin-top:83px"></div>
+onclick="w3_close()"
 
-  <!-- HEADER -->
-  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32">
-    <h4><b>À propos de moi</b></h4>
-  </div>
+style="cursor:pointer"
 
-  <!-- CONTENU -->
-  <div class="w3-container w3-padding-32">
+id="myOverlay">
 
-    <div class="content-card w3-center">
-
-      <img src="Photo Perso.jpg" class="profile-img">
-
-      <h3><b>Bosc Zaki</b></h3>
-
-      <p>
-        Étudiant passionné de jeux vidéo, d'informatique et de philosophie.
-        Toujours en recherche de nouvelles expériences.
-      </p>
-
-      <p>📧 zaki.bosc34678@gmail.com</p>
-      <p>📱 07 52 08 28 84</p>
-
-      <hr>
-
-      <h4><b>Compétences Techniques</b></h4>
-
-      <div class="skill">
-        <b>Filmora</b><br>
-        <img src="Filmora.png">
-        <div class="w3-white">
-          <div class="w3-grey w3-center" style="width:95%">95%</div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <b>Maintenance Informatique</b><br>
-        <img src="PC.jpg">
-        <div class="w3-white">
-          <div class="w3-grey w3-center" style="width:75%">75%</div>
-        </div>
-      </div>
-
-      <div class="skill">
-        <b>FL Studio</b><br>
-        <img src="Fl Studio.jpg">
-        <div class="w3-white">
-          <div class="w3-grey w3-center" style="width:30%">30%</div>
-        </div>
-      </div>
-
-      <hr>
-
-      <h4><b>Instrumental réalisée</b></h4>
-
-      <audio controls>
-        <source src="Project_2.mp3" type="audio/mpeg">
-      </audio>
-
-    </div>
-  </div>
 </div>
 
-<!-- SCRIPT -->
+<!-- Contenu principal -->
+
+<div class="w3-main"
+
+id="mainContent"
+
+style="margin-left:300px">
+
+<div class="w3-hide-large"
+
+style="margin-top:83px">
+
+</div>
+
+<!-- Titre -->
+
+<div class="w3-container w3-dark-grey w3-center w3-padding-32">
+
+<h2>
+
+<b>À propos de moi</b>
+
+</h2>
+
+</div>
+
+<div class="w3-container w3-padding-32">
+
+<!-- Profil -->
+
+<div class="box w3-center">
+
+<img src="Photo Perso.jpg"
+
+class="profile">
+
+<h2>
+
+Bosc Zaki
+
+</h2>
+
+<p>
+
+Étudiant passionné par l'informatique, les jeux vidéo, la philosophie et les nouvelles technologies.
+
+Toujours à la recherche de nouvelles expériences.
+
+</p>
+
+<div class="contact">
+
+<p>
+
+📧
+
+<a href="mailto:zaki.bosc34678@gmail.com">
+
+zaki.bosc34678@gmail.com
+
+</a>
+
+</p>
+
+<p>
+
+📱
+
+<a href="tel:+33752082884">
+
+07 52 08 28 84
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+<!-- Compétences -->
+
+<div class="box">
+
+<h3>
+
+Compétences techniques
+
+</h3>
+
+<hr>
+
+<div class="skill">
+
+<b>Filmora</b>
+
+<br>
+
+<img src="Filmora.png">
+
+<div class="w3-light-grey progress">
+
+<div class="w3-grey w3-center"
+
+style="width:95%">
+
+95%
+
+</div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<b>Maintenance informatique</b>
+
+<br>
+
+<img src="PC.jpg">
+
+<div class="w3-light-grey progress">
+
+<div class="w3-grey w3-center"
+
+style="width:75%">
+
+75%
+
+</div>
+
+</div>
+
+</div>
+
+<div class="skill">
+
+<b>FL Studio</b>
+
+<br>
+
+<img src="Fl Studio.jpg">
+
+<div class="w3-light-grey progress">
+
+<div class="w3-grey w3-center"
+
+style="width:30%">
+
+30%
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Audio -->
+
+<div class="box">
+
+<h3>
+
+Instrumental composée
+
+</h3>
+
+<p>
+
+Exemple de création audio réalisée avec FL Studio :
+
+</p>
+
+<audio controls>
+
+<source src="Project_2.mp3"
+type="audio/mpeg">
+
+Votre navigateur ne supporte pas l'audio.
+
+</audio>
+
+</div>
+
+</div>
+
+</div>
+
 <script>
 
 function w3_open(){
-  document.getElementById("mySidebar").style.display="block";
-  document.getElementById("myOverlay").style.display="block";
+
+document.getElementById("mySidebar").style.display="block";
+
+document.getElementById("myOverlay").style.display="block";
+
 }
 
 function w3_close(){
-  document.getElementById("mySidebar").style.display="none";
-  document.getElementById("myOverlay").style.display="none";
+
+document.getElementById("mySidebar").style.display="none";
+
+document.getElementById("myOverlay").style.display="none";
+
+}
+
+window.onload=function(){
+
+if(window.innerWidth>992){
+
+document.getElementById("mySidebar").style.display="block";
+
+}
+
+}
+
+window.onresize=function(){
+
+if(window.innerWidth>992){
+
+document.getElementById("mySidebar").style.display="block";
+
+document.getElementById("myOverlay").style.display="none";
+
+}else{
+
+document.getElementById("mySidebar").style.display="none";
+
+}
+
 }
 
 </script>
